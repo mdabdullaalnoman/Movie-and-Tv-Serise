@@ -1,0 +1,21 @@
+body{
+    background-color: #082032;
+}
+#popular-movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 30px;
+    color: white;
+    padding: 20px 0;
+}
+
+#popular-movies .popular-card:hover {
+    box-shadow: 0 3px 10px lightblue;
+    transition: .5s;
+}
+
+#popular-movies .popular-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
