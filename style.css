@@ -9,13 +9,32 @@ body{
     padding: 20px 0;
 }
 
+#popular-movie-tittle {
+    color: white;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 25px;
+}
+
 #popular-movies .popular-card:hover {
-    box-shadow: 0 3px 10px lightblue;
-    transition: .5s;
+    transform: scale(1.1);
+    transition: .9s;
 }
 
 #popular-movies .popular-card img {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 5px;
+}
+.popup-img{
+    width: 50%;
+    text-align: center !important;
+}
+
+@media(max-width: 668px){
+    #popular-movies {
+        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+        grid-gap: 10px;
+        color: white;
+    }
 }
