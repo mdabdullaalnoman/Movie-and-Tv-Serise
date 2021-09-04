@@ -1,5 +1,39 @@
 body{
     background-color: #082032;
+    padding: 0 9%;
+    margin: 0;
+}
+.search-warp {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.search-warp input{
+    width: 80%;
+    height: 50px;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    font-size: 25px;
+    padding-left: 20px;
+}
+.search-warp input::placeholder{
+    font-size: 18px;
+    color: gray;
+    padding-left: 10px;
+}
+.search-warp button{
+   border: none;
+   padding: 15px 30px;
+   border-radius: 0 25px  25px 0;
+   font-size: 20px;
+   font-weight: bold;
+   background-image: linear-gradient(to right, #1CD8D2 0%, #93EDC7  51%, #1CD8D2  100%);
+}
+.search-warp button:hover{
+    background-image: linear-gradient(to right, #1CD8D2 0%,   #1CD8D2 51%, #93EDC7 100%);
 }
 #popular-movies , .search-result{
     display: grid;
@@ -13,7 +47,6 @@ body{
     color: white;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    padding-top: 25px;
 }
 
 #popular-movies .popular-card:hover {
@@ -32,6 +65,15 @@ body{
 }
 
 @media(max-width: 668px){
+    body{
+        padding: 0 2%;
+    }
+    .search-warp button{
+        border: none;
+        padding: 18px 15px;
+        border-radius: 0 25px  25px 0;
+        font-size: 15px;
+     }
     #popular-movies {
         grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
         grid-gap: 10px;
