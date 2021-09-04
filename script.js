@@ -94,6 +94,8 @@ const displayMovieDetails = (details) => {
 // click search btn and get search results
 document.getElementById('search-btn').addEventListener('click', function () {
 
+  clickedMovie = document.getElementById('popular-movie-details').textContent = '';
+
   fetch('https://api.themoviedb.org/3/movie/popular?api_key=9a5390b9a3a6704663b623e43fc0b4c4')
     .then(res => res.json())
     .then(data => {
@@ -118,6 +120,7 @@ document.getElementById('search-btn').addEventListener('click', function () {
         h1.style.textAlign = 'center';
         h1.style.display = display;
         h1.innerText = innerText;
+        document.getElementById('search-value').value = '';
       };
 
       if (filterData.length == 0 || inputValue == '') {
