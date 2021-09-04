@@ -63,7 +63,16 @@ body{
     width: 50%;
     text-align: center !important;
 }
+#spinner{
+    text-align: center;
+    display: none;
+}
+#spinner p{
+    color: white;
+}
 
+
+/* responsive */
 @media(max-width: 668px){
     body{
         padding: 0 2%;

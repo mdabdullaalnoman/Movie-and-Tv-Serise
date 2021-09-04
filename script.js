@@ -1,5 +1,15 @@
+// spinner show hide
+const spinner = (display) =>{
+  const loadingGif = document.getElementById('spinner');
+  loadingGif.style.display = display;
+}
+
+
 // load popular movie 
 const LoadPopularMovie = async () => {
+  // spinner show
+  spinner('block');
+
   const response = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=9a5390b9a3a6704663b623e43fc0b4c4');
   const data = await response.json();
   displayPopularMovie(data)
@@ -21,8 +31,11 @@ const displayPopularMovie = (data) => {
         <p>${movie.release_date}</p>
         `;
     document.getElementById('popular-movies').appendChild(div);
+    spinner('none');
   });
 };
+
+
 
 
 
